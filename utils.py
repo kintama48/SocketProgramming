@@ -1,3 +1,4 @@
+# checks if a digit is a number
 def is_digit(number):
     try:
         int(number)
@@ -6,7 +7,7 @@ def is_digit(number):
         return False
 
 
-def search_again():
+def calculate_again():
     return input(f"\n"
                  f"          Do you want to calculate        \n"
                  f"          again (Y/N)? : ")

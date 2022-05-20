@@ -13,17 +13,18 @@ while True:
     print("Received Packet from:", connection_socket.getpeername())
     query = (connection_socket.recv(1024)).decode()
 
-    # if the client does not wish to search again
+    # if the client does not wish to calculate again then
     # close connection
-
     if query in "qn":
         connection_socket.close()
         break
 
-    query = query.split(", ")
+    query = query.split(", ")  # packet comes in form "{a}, {b}, {operation_type}" so split is needed
 
+    # parse the list of strings got from query
     a, b = int(query[0]), int(query[1])
     operation = query[2]
+    # ----------------------------------------
 
     result = 0
 
@@ -36,4 +37,4 @@ while True:
     elif operation == "-":
         result = a - b
 
-    connection_socket.send(str(result).encode())
+    connection_socket.send(str(result).encode())    # send result

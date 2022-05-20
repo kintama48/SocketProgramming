@@ -46,9 +46,9 @@ while True:
 
     print_result(result)
 
-    again = search_again()
+    again = calculate_again()
 
-    # if search_again is "n"
+    # if calculate_again is "n"
     # then tell server to close connection and close client connection
     # else continue
     if again.lower().strip() == 'n':
