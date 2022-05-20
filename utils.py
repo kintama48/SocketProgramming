@@ -8,16 +8,14 @@ def is_digit(number):
 
 def search_again():
     return input(f"\n"
-                 f"  _____________________________________________\n"
-                 f"|          Do you want to do calculations        |"
-                 f"|           again (Y/N)? :                       |\n"
-                 f"  _____________________________________________\n")
+                 f"          Do you want to calculate        \n"
+                 f"          again (Y/N)? : ")
 
 
 def print_result(result):
     print(f"\n"
           f"    _____________________________________________\n"
-          f"   |             Result: {result}                 |\n"
+          f"   |             Result: {result}                     |\n"
           f"    _____________________________________________\n")
 
 

@@ -1,7 +1,7 @@
 from socket import *
 from utils import *
 
-server_name = '192.168.43.70'  # 'servername'
+server_name = '192.168.43.70'  # Please enter your IP here
 server_port = 12002
 client_socket = socket(AF_INET, SOCK_STREAM)
 client_socket.connect((server_name, server_port))
@@ -43,5 +43,7 @@ while True:
     if again.lower().strip() == 'n':
         client_socket.send(again.lower().encode())
         break
+    else:
+        user_input = get_input()
 
 client_socket.close()
